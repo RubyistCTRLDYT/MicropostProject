@@ -50,3 +50,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'coffee-script-source', '1.8.0'
 gem 'bootstrap-sass', '3.3.7'
+gem 'bcrypt', '3.1.11'
+gem 'rails-controller-testing', '1.0.2'
