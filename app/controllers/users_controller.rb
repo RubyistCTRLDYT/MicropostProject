@@ -10,7 +10,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params) 
     if @user.save
-      # 处理注册成功的情况
+      # 处理注册成功的情况23
+      log_in @user
       flash[:success] = "Welcome to the Sample App!"
       redirect_to @user 
       #不过，也可以写成：
