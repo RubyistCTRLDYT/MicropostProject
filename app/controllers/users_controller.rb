@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update]
+  before_action :admin_user, only: :destroy
 
   def new
     @user = User.new
@@ -19,9 +20,9 @@ class UsersController < ApplicationController
     @user = User.new(user_params) 
     if @user.save
       # 处理注册成功的情况
-      log_in @user
-      flash[:success] = "Welcome to the Sample App!"
-      redirect_to @user 
+      @user.send_activation_email
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to root_url 
       #不过，也可以写成：
       #redirect_to user_url(@user)
       #Rails 看到redirect_to @user 后
@@ -67,6 +68,11 @@ class UsersController < ApplicationController
     User.find(params[:id]).destroy
     flash[:success] = "User was successfully deleted"
     redirect_to users_url
+  end
+
+  # 确保是管理员
+  def admin_user
+    redirect_to(root_url) unless current_user.admin?
   end
 
   private
