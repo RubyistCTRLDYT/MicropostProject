@@ -1,5 +1,10 @@
-Hi <%= @user.name %>,
+<h1>Financial Management</h1>
+<p>Hi <%= @user.name %>,</p>
+<p>
+  Welcome to the Financial Management App! Click on the link below to activate your account:
+</p>
+<%= link_to "Activate your Email", edit_account_activation_url(@user.activation_token,
+                                                        email: @user.email) %>
 
-Welcome to the Sample App! Click on the link below to activate your account:
-
-<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
+<p> NOTE: This is an automated reply from a system mailbox.</p>
+<p> ,Please do not reply to this email. Thank you!</p>         

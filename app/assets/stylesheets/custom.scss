@@ -32,6 +32,9 @@ textarea {
     margin-bottom: 10px;
     }
 
+#containerlogo {
+    color: black;
+}
 
     /* typography */
 h1, h2, h3, h4, h5, h6 {
@@ -66,15 +69,25 @@ p {
     margin-right: 10px;
     font-size: 1.7em;
     color: white;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     letter-spacing: -1px;
     padding-top: 9px;
     font-weight: bold;
     }
 
+
+
 #logo:hover {
-    color: white;
+    color: rgb(51,122,183);
     text-decoration: none;
+    }
+
+#FMlogo{
+    float: left;
+    }
+
+#FMlogo_small{
+    float: right;
     }
 
 /*img {
@@ -209,4 +222,10 @@ input {
 #delete_user {
     color:red;
     float: right;
+}
+
+#FMtext{
+    float:left;
+    position:relative;
+    left:38%;
 }
