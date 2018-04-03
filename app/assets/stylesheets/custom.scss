@@ -96,6 +96,15 @@ h1 {
           4px 4px 0px #d5d5d5, 
           7px 7px 0px rgba(0, 0, 0, 0.2);
       }
+
+      &.retroshadow_while {
+        color: #2c2c2c;
+        background-color: white;
+        letter-spacing: .05em;
+        text-shadow: 
+          4px 4px 0px #d5d5d5, 
+          7px 7px 0px rgba(0, 0, 0, 0.2);
+      }
     }
 
 h2 {
