@@ -87,11 +87,5 @@ class User < ApplicationRecord
       self.activation_digest = User.digest(activation_token)
     end
 
-<<<<<<< HEAD
-    def temp
-    end
-
-=======
     
->>>>>>> password-reset
 end
