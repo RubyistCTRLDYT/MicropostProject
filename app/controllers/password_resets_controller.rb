@@ -52,8 +52,10 @@ class PasswordResetsController < ApplicationController
     def valid_user
       unless (@user && @user.activated? &&
               @user.authenticated?(:reset, params[:id]))
-        redirect_to root_url
-        flash.now[:danger] = "Your account is not activated or you are not a valid user"
+              flash[:danger] = "Your account is not activated 
+                                    or you are not a valid user"
+              redirect_to root_url
+        
       end
     end
 
