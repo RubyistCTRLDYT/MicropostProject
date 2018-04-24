@@ -7,7 +7,7 @@
 development:
   adapter: postgresql
   encoding: utf8
-  database: Financial_Management_development
+  database: Microposts_development
   pool: 5
   username: postgres
   password: 123456
@@ -15,7 +15,7 @@ development:
 test: &TEST
   adapter: postgresql
   encoding: utf8
-  database: Financial_Management_test
+  database: Microposts_test
   pool: 5
   username: postgres
   password: 123456
@@ -23,7 +23,7 @@ test: &TEST
 production:
   adapter: postgresql
   encoding: utf8
-  database: Financial_Management_production
+  database: Microposts_production
   pool: 5
   username: postgres
   password: 123456
